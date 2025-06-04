@@ -1,0 +1,18 @@
+{
+  "title": "Test Project 2",
+  "slug": "test-project-2",
+  "date": "2024-06-06T00:00:00.000Z",
+  "body": {
+    "raw": "",
+    "code": "var Component=(()=>{var x=Object.create;var s=Object.defineProperty;var j=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var _=Object.getPrototypeOf,d=Object.prototype.hasOwnProperty;var g=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),l=(t,e)=>{for(var n in e)s(t,n,{get:e[n],enumerable:!0})},c=(t,e,n,a)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of f(e))!d.call(t,o)&&o!==n&&s(t,o,{get:()=>e[o],enumerable:!(a=j(e,o))||a.enumerable});return t};var p=(t,e,n)=>(n=t!=null?x(_(t)):{},c(e||!t||!t.__esModule?s(n,\"default\",{value:t,enumerable:!0}):n,t)),M=t=>c(s({},\"__esModule\",{value:!0}),t);var i=g((h,u)=>{u.exports=_jsx_runtime});var X={};l(X,{default:()=>F,frontmatter:()=>C});var r=p(i()),C={title:\"Test Project 2\",slug:\"test-project-2\",date:\"2024-06-06\"};function m(t){return(0,r.jsx)(r.Fragment,{})}function D(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(m,t)})):m(t)}var F=D;return M(X);})();\n;return Component;"
+  },
+  "_id": "cases/project2.mdx",
+  "_raw": {
+    "sourceFilePath": "cases/project2.mdx",
+    "sourceFileName": "project2.mdx",
+    "sourceFileDir": "cases",
+    "contentType": "mdx",
+    "flattenedPath": "cases/project2"
+  },
+  "type": "Case"
+}

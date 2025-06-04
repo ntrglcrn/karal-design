@@ -1,16 +1,16 @@
 import Image from "next/image";
-import Header from "./components/Header.tsx";
-import Hero from "./components/Hero.tsx";
-import Features from "./components/Features.tsx";
-import Offer from "./components/Offer.tsx";
-import CasesPreview from "./components/CasesPreview.tsx";
-import Footer from "./components/Footer.tsx";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import Features from "@/components/Features";
+import Offer from "@/components/Offer";
+import CasesPreview from "@/components/CasesPreview";
+import Footer from '@/components/Footer';
 
 export default function Page() {
   return (
     <main>
       <Header />
-      <Hero />
+      <HeroSection />
       <Features />
       <Offer />
       <CasesPreview />

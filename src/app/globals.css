@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Absurdite';
+  src: url('/fonts/Absurdite.otf') format('opentype');
+  font-weight: normal; /* Или укажите реальный вес, если он не normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display Regular'; /* Даем более точное имя */
+  src: url('/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: normal; /* Или укажите реальный вес */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Добавьте здесь другие @font-face правила для других начертаний (Medium, Semibold и т.д.), если необходимо */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -12,15 +30,18 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Устанавливаем шрифт по умолчанию для текста */
+  font-family: 'SF Pro Display Regular', sans-serif;
 }

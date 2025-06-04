@@ -1,24 +1,36 @@
-function Header() {
+import React from 'react';
+import Link from 'next/link';
+
+const Header: React.FC = () => {
   return (
-    <header className="fixed w-full top-0 bg-white shadow z-50 px-6 py-4 flex justify-between items-center">
-      <div>
-        <span className="text-xl font-bold text-gray-800">Karal Design</span>
+    <header className="w-full px-4 py-2 flex items-center justify-between bg-white">
+      {/* Логотип - используем заглушку, так как это булевая операция в Figma */}
+      <div className="text-[#014d8c] text-[24px] font-absurdite">
+        {/* Здесь будет ваш логотип, например, SVG или изображение */}
+        Karal.Design
       </div>
+
       <nav>
-        <ul className="flex space-x-6">
+        <ul className="flex items-center space-x-12">
           <li>
-            <a href="#cases" className="text-gray-600 hover:text-gray-800">Cases</a>
+            <Link href="/cases" className="text-[#014d8c] text-[18px] font-sf-pro-display-regular">
+              Work
+            </Link>
           </li>
           <li>
-            <a href="#about" className="text-gray-600 hover:text-gray-800">About</a>
+            <Link href="/about" className="text-[#014d8c] text-[18px] font-sf-pro-display-regular">
+              About
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="text-gray-600 hover:text-gray-800">Contact</a>
+            <Link href="/contact" className="text-[#014d8c] text-[18px] font-sf-pro-display-regular">
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
 
 export default Header; 
