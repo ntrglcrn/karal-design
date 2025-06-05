@@ -18,21 +18,21 @@ const Header: React.FC = () => {
         <ul className="flex items-center space-x-12">
           <li>
             <AnimateOnScroll delay={100}>
-              <Link href="/cases" className="text-[#014d8c] text-[16px] font-sf-pro-display-regular">
+              <Link href="/cases" className="text-[#014d8c] text-[16px] font-sf-pro-display-regular hover:text-[#1C1C1C]">
                 Work
               </Link>
             </AnimateOnScroll>
           </li>
           <li>
             <AnimateOnScroll delay={200}>
-              <Link href="/about" className="text-[#014d8c] text-[16px] font-sf-pro-display-regular">
+              <Link href="/about" className="text-[#014d8c] text-[16px] font-sf-pro-display-regular hover:text-[#1C1C1C]">
                 About
               </Link>
             </AnimateOnScroll>
           </li>
           <li>
             <AnimateOnScroll delay={300}>
-              <Link href="/contact" className="text-[#014d8c] text-[16px] font-sf-pro-display-regular">
+              <Link href="/contact" className="text-[#014d8c] text-[16px] font-sf-pro-display-regular hover:text-[#1C1C1C]">
                 Contact
               </Link>
             </AnimateOnScroll>

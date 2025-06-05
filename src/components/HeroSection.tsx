@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 const HeroSection: React.FC = () => {
@@ -12,6 +12,7 @@ const HeroSection: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
