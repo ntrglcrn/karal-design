@@ -60,7 +60,7 @@ const CasesPreview: React.FC = () => {
           <Link 
             key={caseItem._id} 
             href={`/cases/${caseItem.slug}`} 
-            className="block relative p-4 transition-shadow duration-200 overflow-hidden" 
+            className="block relative p-4 transition-shadow duration-200 overflow-hidden group" // Добавляем группу для ховер эффекта
             style={{ height: '60vh' }} // Set overall card height
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
@@ -78,6 +78,9 @@ const CasesPreview: React.FC = () => {
               Ваш браузер не поддерживает тег video.
             </video>
 
+            {/* Оверлей для эффекта осветления */}
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+
             {/* Text Overlays */}
             <div className="absolute top-0 left-0 py-4 pl-6 text-[#014D8C]"> {/* Text color set to white for visibility over potential video */}
               <p className="text-lg">UI/UX Design</p> {/* Category */}
@@ -90,7 +93,7 @@ const CasesPreview: React.FC = () => {
 
             <div className="absolute bottom-0 left-0 py-4 pl-6 text-[#014D8C]"> {/* Text color set to white for visibility */}
               <AnimateOnScroll delay={index * 100}> {/* Добавляем задержку для каждого кейса */}
-              <h3 className="text-lg">{caseItem.title}</h3> {/* Case Title */}
+              <h3 className="text-lg font-semibold">{caseItem.title}</h3> {/* Case Title */}
               </AnimateOnScroll>
             </div>
           </Link>
