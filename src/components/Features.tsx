@@ -9,21 +9,21 @@ function Features() {
         <div className="flex flex-wrap">
           <div className="mr-8 mb-4">
             <AnimateOnScroll>
-              <p className="text-2xl font-semibold">Currently</p>
+              <p className="text-lg">Currently</p>
             </AnimateOnScroll>
-            <p className="text-lg">Freelancing</p>
+            <p className="text-lg text-[#769AB8]">Freelancing</p>
           </div>
           <div className="mr-8 mb-4">
             <AnimateOnScroll>
-              <p className="text-2xl font-semibold">Specialized at</p>
+              <p className="text-lg">Specialized at</p>
             </AnimateOnScroll>
-            <p className="text-lg">UX/UI Design, Apps & Websites</p>
+            <p className="text-lg text-[#769AB8]">UX/UI Design, Apps & Websites</p>
           </div>
           <div className="mb-4">
             <AnimateOnScroll>
-              <p className="text-2xl font-semibold">Empowering</p>
+              <p className="text-lg">Empowering</p>
             </AnimateOnScroll>
-            <p className="text-lg">Digital Products & Marketing Campaigns</p>
+            <p className="text-lg text-[#769AB8]">Digital Products & Marketing Campaigns</p>
           </div>
         </div>
 
@@ -31,15 +31,15 @@ function Features() {
         <div className="flex flex-wrap">
           <div className="mr-8 mb-4">
             <AnimateOnScroll>
-              <p className="text-2xl font-semibold">Enthusiastic about</p>
+              <p className="text-lg">Enthusiastic about</p>
             </AnimateOnScroll>
-            <p className="text-lg">Language Learning, Art & AI</p>
+            <p className="text-lg text-[#769AB8]">Language Learning, Art & AI</p>
           </div>
           <div className="mb-4">
             <AnimateOnScroll>
-              <p className="text-2xl font-semibold">From</p>
+              <p className="text-lg">From</p>
             </AnimateOnScroll>
-            <p className="text-lg">Kazakhstan</p>
+            <p className="text-lg text-[#769AB8]">Kazakhstan</p>
           </div>
         </div>
       </div>

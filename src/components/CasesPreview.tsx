@@ -25,7 +25,7 @@ const CasesPreview: React.FC = () => {
   return (
     <section className="py-8 px-4 text-[#014d8c] mb-[100px]"> {/* Section takes full width and applies horizontal padding, added mb-[175px] */}
       <AnimateOnScroll>
-        <h2 className="text-7xl font-regular mb-6">Featured Projects</h2> {/* Removed px-4 from heading */}
+      <h2 className="text-7xl font-regular mb-6">Featured Projects</h2> {/* Removed px-4 from heading */}
       </AnimateOnScroll>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> {/* Removed px-4 from grid container */}
         {latestCases.map((caseItem: Case, index) => (
@@ -55,7 +55,7 @@ const CasesPreview: React.FC = () => {
             
             <div className="absolute bottom-0 left-0 p-4 text-white"> {/* Text color set to white for visibility */}
               <AnimateOnScroll delay={index * 100}> {/* Добавляем задержку для каждого кейса */}
-                <h3 className="text-lg font-semibold">{caseItem.title}</h3> {/* Case Title */}
+              <h3 className="text-lg font-semibold">{caseItem.title}</h3> {/* Case Title */}
               </AnimateOnScroll>
             </div>
           </Link>
