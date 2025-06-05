@@ -51,3 +51,12 @@ body {
     font-size: 33px; /* Установлен минимальный размер шрифта для h2 на экранах от 768px */
   }
 }
+
+.hover-lift {
+  cursor: pointer; /* Изменяем курсор на указатель */
+}
+
+.hover-lift:hover {
+  transform: translateY(-30px);
+  color: #1C1C1C; /* Изменяем цвет текста на черный при наведении */
+}
