@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 const HeroSection: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -30,9 +31,11 @@ const HeroSection: React.FC = () => {
 
       {/* Текст в нижней части */}
       <div className="mt-5 -ml-0.5">
-        <h1 className="text-[#014d8c] text-[13.6vw] md:text-[14.7vw] font-absurdite uppercase leading-none text-center">
-          Karal.Design
-        </h1>
+        <AnimateOnScroll delay={2100}>
+          <h1 className="text-[#014d8c] text-[13.6vw] md:text-[14.7vw] font-absurdite uppercase leading-none text-center">
+            Karal.Design
+          </h1>
+        </AnimateOnScroll>
       </div>
     </section>
   );
