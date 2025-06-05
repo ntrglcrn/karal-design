@@ -3,12 +3,14 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full px-4 py-2 flex items-center justify-between bg-white">
+    <header className="sticky top-0 z-50 w-full px-4 py-2 flex items-center justify-between bg-transparent transition-colors duration-300">
       {/* Логотип - используем заглушку, так как это булевая операция в Figma */}
-      <div className="text-[#014d8c] text-[16px] font-absurdite">
-        {/* Здесь будет ваш логотип, например, SVG или изображение */}
-        Karal.Design
-      </div>
+      <Link href="/">
+        <div className="text-[#014d8c] text-[16px] font-absurdite">
+          {/* Здесь будет ваш логотип, например, SVG или изображение */}
+          Karal.Design
+        </div>
+      </Link>
 
       <nav>
         <ul className="flex items-center space-x-12">
