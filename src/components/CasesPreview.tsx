@@ -22,7 +22,7 @@ const CasesPreview: React.FC = () => {
   ];
 
   return (
-    <section className="py-8 px-4 text-[#014d8c] mb-[175px]"> {/* Section takes full width and applies horizontal padding, added mb-[175px] */}
+    <section className="py-8 px-4 text-[#014d8c] mb-[100px]"> {/* Section takes full width and applies horizontal padding, added mb-[175px] */}
       <h2 className="text-7xl font-regular mb-6">Featured Projects</h2> {/* Removed px-4 from heading */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> {/* Removed px-4 from grid container */}
         {latestCases.map((caseItem: Case, index) => (

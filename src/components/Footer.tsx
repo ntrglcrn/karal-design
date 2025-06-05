@@ -8,7 +8,7 @@ function Footer() {
           {/* Frame 70 - Titles and Main Text */}
           <div className="mb-8">
             <p className="text-[#769ab8] text-4xl font-normal">Interested in working with me?</p>
-            <p className="text-white text-8xl font-normal leading-tight">Together, we hold the power to design the world that we envision</p>
+            <p className="text-white text-5xl font-normal leading-tight">Together, we hold the power to design the world that we envision</p>
           </div>
 
           {/* Contact Info (Send a message, email) */}

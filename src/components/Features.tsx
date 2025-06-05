@@ -1,6 +1,6 @@
 function Features() {
   return (
-    <section className="py-8 px-4 text-[#014d8c] mb-[175px]">
+    <section className="py-8 px-4 text-[#014d8c] mb-[100px]">
       <div className="flex flex-wrap justify-between">
         {/* Features-left */}
         <div className="flex flex-wrap">
