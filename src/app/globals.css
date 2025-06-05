@@ -46,9 +46,15 @@ body {
   font-family: 'SF Pro Display Regular', sans-serif;
 }
 
+h2 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 400; /* font-regular */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
 @media (min-width: 768px) {
   h2 {
-    font-size: 33px; /* Установлен минимальный размер шрифта для h2 на экранах от 768px */
+    font-size: 4.5rem; /* text-7xl */
   }
 }
 

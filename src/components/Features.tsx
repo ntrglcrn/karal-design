@@ -4,9 +4,10 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 function Features() {
   return (
     <section className="py-8 px-4 text-[#014d8c] mb-[100px]">
-      <div className="flex flex-wrap justify-between">
-        {/* Features-left */}
-        <div className="flex flex-wrap">
+      {/* Основной контейнер, который будет гридом на md+ */}
+      <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
+        {/* Блок с первыми тремя пунктами - занимает 2 колонки на md+ */}
+        <div className="md:col-span-2 flex flex-wrap">
           <div className="mr-8 mb-4">
             <AnimateOnScroll>
               <p className="text-lg">Currently</p>
@@ -27,8 +28,8 @@ function Features() {
           </div>
         </div>
 
-        {/* Features-right */}
-        <div className="flex flex-wrap">
+        {/* Блок с последними двумя пунктами - занимает 1 колонку на md+, начиная с 3-й */} 
+        <div className="md:col-span-1 flex flex-wrap">
           <div className="mr-8 mb-4">
             <AnimateOnScroll>
               <p className="text-lg">Enthusiastic about</p>

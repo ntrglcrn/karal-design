@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '425px', // Пользовательский breakpoint для мобильных устройств
+      },
       fontFamily: {
         'Absurdite': ['Absurdite', 'sans-serif'],
         'SF Pro Display Regular': ['SF Pro Display Regular', 'sans-serif'],
