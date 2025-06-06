@@ -92,9 +92,7 @@ const CasesPreview: React.FC = () => {
             ></div>
 
             <div className="absolute bottom-0 left-0 py-4 pl-6 text-[#014D8C]"> {/* Text color set to white for visibility */}
-              <AnimateOnScroll delay={index * 100}> {/* Добавляем задержку для каждого кейса */}
               <h3 className="text-lg font-semibold">{caseItem.title}</h3> {/* Case Title */}
-              </AnimateOnScroll>
             </div>
           </Link>
         ))}
