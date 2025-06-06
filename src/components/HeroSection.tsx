@@ -2,9 +2,11 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {

@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect, useMemo } from 'react';
 import { allCases } from 'contentlayer/generated';
 import Link from 'next/link'; // Assuming Next.js for the Link component and routing
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import { useTranslation } from 'react-i18next';
 
 interface Case {
   _id: string;
@@ -14,6 +15,7 @@ interface Case {
 }
 
 const CasesPreview: React.FC = () => {
+  const { t } = useTranslation();
   // Sort cases by date in descending order and take the latest 3
   const latestCases: Case[] = (allCases as Case[]).sort((a: Case, b: Case) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
 
@@ -28,6 +30,14 @@ const CasesPreview: React.FC = () => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   // State to track hover effect visibility
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  // Определяем мобильное устройство до первого рендера
+  const isMobile = useMemo(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768;
+    }
+    return false;
+  }, [typeof window !== 'undefined' ? window.innerWidth : 0]);
 
   // Handle mouse enter
   const handleMouseEnter = (index: number) => {
@@ -53,7 +63,7 @@ const CasesPreview: React.FC = () => {
   return (
     <section className="py-8 px-4 text-[#014d8c] mb-[100px]"> {/* Section takes full width and applies horizontal padding, added mb-[175px] */}
       <AnimateOnScroll>
-      <h2 className="">Featured Projects</h2> {/* Стили перемещены в globals.css */}
+      <h2 className="">{t('featured_projects')}</h2> {/* Стили перемещены в globals.css */}
       </AnimateOnScroll>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> {/* Removed px-4 from grid container */}
         {latestCases.map((caseItem: Case, index) => (
@@ -67,16 +77,33 @@ const CasesPreview: React.FC = () => {
           >
             {/* Video for Case Preview */}
             {/* Using index to assign video from the list */}
-            <video 
-              ref={el => { videoRefs.current[index] = el; }}
-              className="absolute top-0 left-0 w-full h-full object-cover" 
-              src={videoPaths[index]} 
-              loop 
-              muted 
-              playsInline
-            >
-              Ваш браузер не поддерживает тег video.
-            </video>
+            {typeof window === 'undefined' || isMobile ? null : (
+              <video 
+                ref={el => { videoRefs.current[index] = el; }}
+                className="absolute top-0 left-0 w-full h-full object-cover" 
+                src={videoPaths[index]} 
+                loop 
+                muted 
+                playsInline
+              >
+                Ваш браузер не поддерживает тег video.
+              </video>
+            )}
+            {typeof window !== 'undefined' && isMobile && (
+              <video
+                ref={el => { videoRefs.current[index] = el; }}
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                src={videoPaths[index]}
+                loop
+                muted
+                playsInline
+                autoPlay
+                preload="auto"
+                poster="/img/heroe-hover.jpg"
+              >
+                Ваш браузер не поддерживает тег video.
+              </video>
+            )}
 
             {/* Оверлей для эффекта осветления */}
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
@@ -92,7 +119,7 @@ const CasesPreview: React.FC = () => {
             ></div>
 
             <div className="absolute bottom-0 left-0 py-4 pl-6 text-[#014D8C]"> {/* Text color set to white for visibility */}
-              <h3 className="text-lg font-semibold">{caseItem.title}</h3> {/* Case Title */}
+              <h3 className="text-lg">{caseItem.title}</h3> {/* Case Title */}
             </div>
           </Link>
         ))}

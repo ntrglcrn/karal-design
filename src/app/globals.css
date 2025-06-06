@@ -9,9 +9,9 @@
 }
 
 @font-face {
-  font-family: 'SF Pro Display Regular'; /* Даем более точное имя */
+  font-family: 'SF Pro Display Regular';
   src: url('/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
-  font-weight: normal; /* Или укажите реальный вес */
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }

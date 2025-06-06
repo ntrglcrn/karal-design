@@ -1,7 +1,9 @@
 import React from 'react';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import { useTranslation } from 'react-i18next';
 
 function Features() {
+  const { t } = useTranslation();
   return (
     <section className="py-8 px-4 text-[#014d8c] mb-[100px]">
       {/* Основной контейнер, который будет гридом на md+ */}
@@ -10,21 +12,21 @@ function Features() {
         <div className="md:col-span-2 flex flex-wrap">
           <div className="mr-8 mb-4">
             <AnimateOnScroll>
-              <p className="text-lg">Currently</p>
+              <p className="text-lg">{t('currently')}</p>
             </AnimateOnScroll>
-            <p className="text-lg text-[#769AB8]">Freelancing</p>
+            <p className="text-lg text-[#769AB8]">{t('freelancing')}</p>
           </div>
           <div className="mr-8 mb-4">
             <AnimateOnScroll>
-              <p className="text-lg">Specialized at</p>
+              <p className="text-lg">{t('specialized_at')}</p>
             </AnimateOnScroll>
-            <p className="text-lg text-[#769AB8]">UX/UI Design, Apps & Websites</p>
+            <p className="text-lg text-[#769AB8]">{t('uxui')}</p>
           </div>
           <div className="mb-4">
             <AnimateOnScroll>
-              <p className="text-lg">Empowering</p>
+              <p className="text-lg">{t('empowering')}</p>
             </AnimateOnScroll>
-            <p className="text-lg text-[#769AB8]">Digital Products & Marketing Campaigns</p>
+            <p className="text-lg text-[#769AB8]">{t('digital_products')}</p>
           </div>
         </div>
 
@@ -32,15 +34,15 @@ function Features() {
         <div className="md:col-span-1 flex flex-wrap">
           <div className="mr-8 mb-4">
             <AnimateOnScroll>
-              <p className="text-lg">Enthusiastic about</p>
+              <p className="text-lg">{t('enthusiastic_about')}</p>
             </AnimateOnScroll>
-            <p className="text-lg text-[#769AB8]">Language Learning, Art & AI</p>
+            <p className="text-lg text-[#769AB8]">{t('language_learning')}</p>
           </div>
           <div className="mb-4">
             <AnimateOnScroll>
-              <p className="text-lg">From</p>
+              <p className="text-lg">{t('from')}</p>
             </AnimateOnScroll>
-            <p className="text-lg text-[#769AB8]">Kazakhstan</p>
+            <p className="text-lg text-[#769AB8]">{t('kazakhstan')}</p>
           </div>
         </div>
       </div>
